@@ -1,0 +1,109 @@
+#blockcontent{
+  padding: 20px;
+}
+@media(min-width:786px){
+  #blockcontainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;  
+    border: none;
+    background-color: transparent;
+  }
+  
+  #blockcontainer #blockcard {
+    position: relative;
+    max-width: 400px;
+    height: 300px;  /* Increased height to accommodate title */
+    background-color: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29); -moz-box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29); box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+  }
+  
+  #blockcontainer #blockcard:hover {
+    height: 450px;    
+  }
+  
+  #blockcontainer #blockcard #blockimage {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    top: -40%;
+    left: 0px;
+    -webkit-box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29); -moz-box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29); box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29);
+    z-index: 1;
+    border-radius: 15px;
+  }
+  
+  #blockcontainer #blockcard #blockimage img {
+    max-width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  #blockcontainer #blockcard #blockcontent {
+    position: relative;
+    top: -80px;
+    padding: 10px 15px;
+    color: #111;
+    text-align: center;
+  }
+  
+  #blockcontainer #blockcard #blockcontent .card-title {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #blockcontainer #blockcard #blockcontent .card-text,
+  #blockcontainer #blockcard #blockcontent .btn-link {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  
+  #blockcontainer #blockcard:hover #blockcontent .card-text,
+  #blockcontainer #blockcard:hover #blockcontent .btn-link {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  #blockcontainer #blockcard:hover #blockimage img{
+    width:2
+  }
+  
+  #blockcontent h5 {
+    font-size: 30px;
+  }
+  
+  #blockcontent p {
+    font-size: large;
+  }  
+
+
+
+  .custom-table {
+    background-color: #8e44ad;
+    color: white;
+}
+.custom-table th, .custom-table td {
+    border: 1px solid #9b59b6;
+    padding: 10px;
+    text-align: center;
+}
+.custom-table th {
+    background-color: #9b59b6;
+}
+.custom-table .yes {
+    background-color: #7d3c98;
+}
+.custom-table .no {
+    background-color: #8e44ad;
+}

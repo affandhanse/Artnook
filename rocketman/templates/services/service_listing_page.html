@@ -1,0 +1,49 @@
+{% extends "base.html"%} {%load wagtailimages_tags%} {% block banner %} 
+{%image page.service_bg_image format-webp fill-1600x500 as bgimg %}
+<div style="padding: 30px;padding-bottom:30px; background-image: url({{bgimg.url}}); background-size: cover; background-position: center;">
+ {%endblock%} {% block content %}
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="cc-inner-title text-center">{{page.title}}</h1>
+      {%if page.subtitle%}
+      <p class="cc-inner-subtitle text-center">{{page.subtitle}}</p>
+      {%endif%}
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    {%for card in services %}
+    <div class="col-sm-6 col-md-4 d-flex align-items-stretch " >
+      <div
+        class="card shadow mb-3 overflow-hidden text-center"
+        style="border-radius: 10px"
+      >
+        <a href="{{card.url}}">
+          <picture>
+            {% image card.service_image format-webp fill-573x369 as card_img %}
+            <img
+              src="{{card_img.url}}"
+              alt="Img not loaded"
+              class="lazycard-img-top"
+              style="width: 100%; height: 100%"
+            />
+          </picture>
+        </a>
+        <div class="card-body py-3 px-3">
+          <a href="{{card.url}}">
+            <h5 class="card-title">{{card.title}}</h5>
+            <p class="card-description">{{card.description_short}}</p>
+          </a>
+
+          <p class="card-text">
+            <a href="@todo" class="btn btn-link d-inline">More Details</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+  {%endblock%}
+
+
