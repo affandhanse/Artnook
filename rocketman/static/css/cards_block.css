@@ -1,6 +1,13 @@
 #blockcontent{
   padding: 20px;
 }
+@media(max-width:786px){
+ #blockcontainer{
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29); -moz-box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29); box-shadow: 30px 25px 30px 0px rgba(136, 32, 156, 0.29);
+ }
+}
 @media(min-width:786px){
   #blockcontainer {
     position: relative;
@@ -86,8 +93,7 @@
   #blockcontent p {
     font-size: large;
   }  
-
-
+}
 
   .custom-table {
     background-color: #8e44ad;
@@ -106,4 +112,9 @@
 }
 .custom-table .no {
     background-color: #8e44ad;
+}
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

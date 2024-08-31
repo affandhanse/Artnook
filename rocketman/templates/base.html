@@ -30,6 +30,9 @@
 
         {% block extra_css %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/cards_block.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Pacifico&display=swap" rel="stylesheet">
         {% endblock %}
     </head>
 
@@ -48,6 +51,8 @@
         {%block banner%}{%endblock %}
         <main id="content" class="container my-4" role="main">
         {% block content %}{% endblock %}
+        {% block contact %}{% endblock %}
+
         </main>
         {%include "includes/footer.html"%}
 
