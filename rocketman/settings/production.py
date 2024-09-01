@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 SECRET_KEY = 'mnq-3+7@l32s262r-u)41hv8z3e7!ff0m%6_5-wu8+zks*cpi^'
-ALLOWED_HOTS= ['localhost', 'domainname', '*']
+ALLOWED_HOSTS= ['localhost', 'domainname', '*']
 
 
 
