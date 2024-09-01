@@ -14,6 +14,13 @@ CACHES = {
         "LOCATION": f"{cwd}/.cache"
     }
 }
+if 'debug_toolbar' in INSTALLED_APPS:
+    INSTALLED_APPS.remove('debug_toolbar')
+
+# Remove debug_toolbar middleware if it's in MIDDLEWARE
+if 'debug_toolbar.middleware.DebugToolbarMiddleware' in MIDDLEWARE:
+    MIDDLEWARE.remove('debug_toolbar.middleware.DebugToolbarMiddleware')
+
 
 
 DATABASES ={
