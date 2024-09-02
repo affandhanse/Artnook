@@ -26,8 +26,8 @@ if 'debug_toolbar.middleware.DebugToolbarMiddleware' in MIDDLEWARE:
 DATABASES ={
     "default":{
         "ENGINE" : 'django.db.backends.postgresql',
-        "NAME" : 'artnook',
-        "USER" : 'artnook',
+        "NAME" : 'rocketman',
+        "USER" : 'rocketman',
         "PASSWORD" : 'almeerah.dhanse',
         "HOST" : 'localhost',
         "PORT" : '',
