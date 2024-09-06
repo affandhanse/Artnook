@@ -21,9 +21,8 @@
       </div>
       <div class="col-lg-4 text-lg-right text-center">
         <a
-          href="{% if settings.site_settings.FooterCTASettings.button_internal_page %}{{ settings.site_settings.FooterCTASettings.button_internal_page.url }}
-                {% elif settings.site_settings.FooterCTASettings.button_external_page %}{{ settings.site_settings.FooterCTASettings.button_external_page }}
-                {% else %}#{% endif %}"
+          href="{%if settings.site_settings.FooterCTASettings.button_internal_page%}{{settings.site_settings.FooterCTASettings.button_internal_page}}
+                {%elif settings.site_settings.FooterCTASettings.button_external_page%}{{settings.site_settings.FooterCTASettings.button_external_page}}                {%else%}#{%endif%}"
           class="btn btn-light btn-lg mt-lg-o mt-3"
           >{{settings.site_settings.FooterCTASettings.button_text}}
         </a>

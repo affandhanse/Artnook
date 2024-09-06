@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 SECRET_KEY = 'mnq-3+7@l32s262r-u)41hv8z3e7!ff0m%6_5-wu8+zks*cpi^'
-ALLOWED_HOSTS= ['localhost', 'domainname', '*']
+ALLOWED_HOSTS= ['localhost', 'artnookstudio.mooo.com', '141.148.194.105', '*']
 
 
 
@@ -46,7 +46,31 @@ sentry_sdk.init(
     # We recommend adjusting this value in production.
     profiles_sample_rate=1.0,
 )
+import os
 
+# Email configuration for gmail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'affandhanse05@gmail.com'
+EMAIL_HOST_PASSWORD = 'ldoqhjfvvaezqayw'
+DEFAULT_FROM_EMAIL = 'affandhanse05@gmail.com'
+WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'affandhanse05@gmail.com'
+
+
+def send_email_with_error_handling(subject, message, from_email, recipient_list, fail_silently=False, connection=None, html_message=None):
+    try:
+        connection = connection or get_connection(fail_silently=fail_silently)
+        email_message = EmailMessage(subject, message, from_email, recipient_list, connection=connection)
+        if html_message:
+            email_message.content_subtype = "html"
+            email_message.body = html_message
+        email_message.send()
+        logger.info(f"Email sent successfully to {', '.join(recipient_list)}")
+    except Exception as e:
+        logger.error(f"Failed to send email: {str(e)}")
+        raise  # Re-raise the exception for further handling
 
 
 try:
